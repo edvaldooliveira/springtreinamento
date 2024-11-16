@@ -26,7 +26,7 @@ public class GreetingsController {
     }
     
     
-    
+    //Configuraçoões Importante para o projeto
     @RequestMapping(value = "/olamundo/{nome}", method = RequestMethod.GET )
     @ResponseStatus(HttpStatus.OK)
     public String retornaOlaMundo(@PathVariable String nome) {
