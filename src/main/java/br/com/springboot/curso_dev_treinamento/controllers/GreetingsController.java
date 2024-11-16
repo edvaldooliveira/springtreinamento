@@ -73,6 +73,17 @@ public class GreetingsController {
     	return new ResponseEntity<String>("user deletado com sucesso", HttpStatus.OK);
     	
     }
+    
+    
+    @GetMapping(value = "buscaruserid")
+    @ResponseBody
+    public ResponseEntity<Usuario> buscaruserid(@RequestParam(name = "iduser") Long iduser){
+    	
+    Usuario usuario = usuarioRepository.findById(iduser).get();
+    	
+    	return new ResponseEntity<Usuario>(usuario, HttpStatus.OK);
+    	
+    }
 	
     
 }
