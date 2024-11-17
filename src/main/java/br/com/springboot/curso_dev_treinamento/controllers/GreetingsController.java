@@ -28,7 +28,6 @@ public class GreetingsController {
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
-    
     @RequestMapping(value = "/mostranome/{name}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public String greetingText(@PathVariable String name) {
@@ -74,8 +73,7 @@ public class GreetingsController {
     	return new ResponseEntity<String>("user deletado com sucesso", HttpStatus.OK);
     	
     }
-    
-    
+   
     @GetMapping(value = "buscaruserid")
     @ResponseBody
     public ResponseEntity<Usuario> buscaruserid(@RequestParam(name = "iduser") Long iduser){
@@ -109,5 +107,4 @@ public class GreetingsController {
     	
     }
 	
-    
 }
